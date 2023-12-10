@@ -1,13 +1,11 @@
 namespace BSHomework.Exceptions;
 
-public class HttpResponseException
+public class HttpResponseException : Exception
 {
     public int Status;
-    public string Message;
 
-    public HttpResponseException(int status, string message)
+    public HttpResponseException(int status, string message) : base(message)
     {
         Status = status;
-        Message = message;
     }
 }
